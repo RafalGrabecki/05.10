@@ -1,0 +1,61 @@
+.pricing{
+    padding: 14px 10px;
+    .pricing-wrapper{
+        @include flex(center,center,20px);
+    }
+
+.pricing-card{
+    
+   
+    @extend %glass;
+    text-align: center;
+    width: fit-content;
+    padding: 25px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+    .text{
+        color: red;
+        font-size: 30px;
+        
+    }
+    .text2{
+        font-size: 30px;
+        color: red;
+        
+        
+    }
+    .text3{
+        color: red;
+       
+    
+    }
+
+&:hover{
+    background-color: $color-white;
+    color: rgb(33,33,33);
+    transform: translatey(-20px);
+}
+
+
+
+
+}
+.card-btn{
+    width: 100%;
+    background-color: red;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+.wyrownaj{
+    text-align: start;
+    margin:0;
+    font-size: 30px;
+}
+.wyrownaj1{
+    text-align: start;
+    margin:0;
+    font-size: 20px;
+}
+}

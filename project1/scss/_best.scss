@@ -1,0 +1,58 @@
+.best{
+    padding: 14px 45px;
+.best-wrapper{
+    @include flex(center,center,20px);
+}
+.best-tittle{
+    text-align: center;
+    color: $color-white;
+    font-weight: 500;
+    margin: 15x 0;
+}
+    .best-card{
+        @extend %glass;
+        text-align: center;
+        width: fit-content;
+        padding: 25px;
+        color: $color-white;
+        border-radius: 10px;
+        transition: 0.5s;
+        &:hover{
+            background-color: $color-white;
+            color: rgb(33,33,33);
+            transform: translatey(-20px);
+        }
+        &:hover > img{
+            border-color: rgb(33,33,33);
+            transition: 0.5s;
+        }
+
+        & > img{
+            width: 100%;
+            border-radius: 50%;
+            padding: 10px;
+            border: 2px solid $color-white;
+
+        }
+            .card-desc{
+               
+                margin: 0 auto;
+                font-weight: 300;
+                opacity: 0.6;
+            }
+            .card-btn{
+                padding: 6px 10px;
+                margin: 15px 0;
+                color: $color-white;
+                background-color: $primary-color;
+                border-radius: 25px;
+                border: none;
+            }
+    }
+
+
+
+
+
+
+}

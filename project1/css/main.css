@@ -13,8 +13,6 @@ ul {
 }
 
 .pricing .pricing-card, .best .best-card, .banner .banner-btn, .nav {
-  backdrop-filter: blur(5px) saturate(71%);
-  -webkit-backdrop-filter: blur(5px) saturate(71%);
   background-color: rgba(11, 58, 233, 0.33);
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
@@ -36,15 +34,54 @@ ul {
   align-items: center;
   gap: 15px;
 }
+@media (max-width: 768px) {
+  .nav .nav-list {
+    flex-direction: column;
+  }
+}
 .nav a {
   text-decoration: none;
   color: white;
 }
-.nav button {
+.nav .list-btn {
   padding: 10px;
   border-radius: 15px;
   border: none;
   color: white;
+}
+.nav .menu-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.nav .menu-btn > i {
+  font-size: 33px;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .nav .menu-btn {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .nav .nav-menu {
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.755);
+    min-height: 100vh;
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatex(-100%);
+  }
+}
+
+.showmenu {
+  transform: translatex(0) !important;
 }
 
 .banner {
@@ -77,6 +114,11 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .best .best-wrapper {
+    flex-direction: column;
+  }
 }
 .best .best-tittle {
   text-align: center;
@@ -132,6 +174,11 @@ ul {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .pricing .pricing-wrapper {
+    flex-direction: column;
+  }
+}
 .pricing .pricing-card {
   text-align: center;
   width: -webkit-fit-content;
@@ -164,13 +211,28 @@ ul {
   padding: 5px;
   margin-top: 10px;
 }
-.pricing .wyrownaj {
+.pricing .wyrownaj,
+.pricing .wyrownaj1 {
   text-align: start;
   margin: 0;
   font-size: 30px;
 }
+@media (max-width: 400px) {
+  .pricing .wyrownaj,
 .pricing .wyrownaj1 {
-  text-align: start;
-  margin: 0;
-  font-size: 20px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 300px) {
+  .pricing .wyrownaj,
+.pricing .wyrownaj1 {
+    font-size: 20px;
+    color: greenyellow;
+  }
+}
+@media (max-width: 200px) {
+  .pricing .wyrownaj,
+.pricing .wyrownaj1 {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */

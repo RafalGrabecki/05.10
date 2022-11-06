@@ -2,6 +2,9 @@
     padding: 14px 45px;
 .best-wrapper{
     @include flex(center,center,20px);
+    @media(max-width: 768px){
+        flex-direction: column;
+    }
 }
 .best-tittle{
     text-align: center;

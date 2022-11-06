@@ -1,7 +1,38 @@
-const title= document.getElementById("title");
+
+
+const showgreeting =() =>{
+    const title= document.getElementById("title");
+    
+    const date= new Date();
+    const hour = date.getHours();
+    if( hour <12 && hour >=6) {
+       title.textContent ="Dzień Dobry"
+    }
+    else if (hour >=12 && hour < 18){
+        title.textContent= "GoodAfternoon"
+    }
+    else {
+        title.textContent = "Good Evening"
+    }
+}
+showgreeting();
+
+const przycisk = document.getElementById("login");
 const subtitle = document.getElementById("subtitle");
-title.textContent=("Dzień Dobry");
-subtitle.textContent=("Witaj Janek");
+const powitanie =() => {
+    
+    subtitle.textContent=("Witaj Janek");
+}
+const pozegnanie =() => {
+
+    subtitle.textContent=("Utwórz konto albo się zaloguj");
+}
+
+przycisk.addEventListener("click", powitanie);
+
+
+
+
 
 /* <article class="best-card">
                     <img src="https://i.pravatar.cc/150?img=3" alt="">
@@ -138,5 +169,21 @@ const username =19;
 const info =() =>{
 
 };
+
+const menu = document.getElementById("Menu");
+const Hamburgerbtn= document.getElementById("hamburgerbtn");
+
+const klasa =() =>{
+    menu.classList.toggle("showmenu");
+    // if(menu.classList.contains("showmenu")){
+    //     menu.classList.remove("showmenu")
+    // }
+    // else {
+    //     menu.classList.add("showmenu")
+    // };
+    
+};
+
+Hamburgerbtn.addEventListener("click",klasa);
 
 

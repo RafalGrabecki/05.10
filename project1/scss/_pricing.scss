@@ -2,6 +2,10 @@
     padding: 14px 10px;
     .pricing-wrapper{
         @include flex(center,center,20px);
+        @media(max-width:768px){
+          flex-direction:column;
+          
+        }
     }
 
 .pricing-card{
@@ -48,14 +52,21 @@
     margin-top: 10px;
 
 }
-.wyrownaj{
+.wyrownaj ,
+    
+.wyrownaj1{
+    @media(max-width: 400px){
+        font-size: 25px;
+    }
+    @media(max-width: 300px){
+        font-size: 20px;
+        color: greenyellow;
+    }
+    @media(max-width: 200px){
+        font-size: 10px;
+    }
     text-align: start;
     margin:0;
     font-size: 30px;
-}
-.wyrownaj1{
-    text-align: start;
-    margin:0;
-    font-size: 20px;
 }
 }
